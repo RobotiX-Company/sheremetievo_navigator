@@ -1,0 +1,1 @@
+'vxod_1', 'perekrestok_1', 'perekrestok_10', 'perekrestok_5', 'perekrestok_21', 'lift_1'

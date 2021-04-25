@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+<content>
+    <section class="msg" style="overflow: hidden">
+        <div class="intro-div">
+            <div class="map-container">
+                <img id="mapB1" src="terminals/b_1.svg" style="width: 3000px;" draggable="false"/>
+                <canvas id="canvas" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;" width=3000 height="3000"></canvas>
+                <object class="i_am_here" data="svg/I_am_here_navigator.svg"></object>
+            </div>
+        </div>
+    </section>
+    <input id="hamburger" class="hamburger" type="checkbox"/>
+    <label class="hamburger" for="hamburger">
+        <i></i>
+        <text>
+            <close>close</close>
+            <open>menu</open>
+        </text>
+    </label>
+    <section class="drawer-list">
+        <ul>
+            <li><a href="#"><img class="menu-icon" id="search-icon" src="svg/search_navigator.svg"/>Поиск</a></li>
+            <li onclick="showMe()"><a href="#"><img class="menu-icon" id="i_am_here-icon" src="svg/I_am_here_ui_navigator.svg"/>&nbspГде я на карте?</a></li>
+            <li><a href="#"><img class="menu-icon" id="settings-icon" src="svg/settings_navigator.svg"/>&nbsp Настройки</a></li>
+            <li><a href="#"><img class="menu-icon" id="about-icon" src="svg/about_navigator.svg"/>&nbsp О программе</a></li>
+        </ul>
+    </section>
+    <div id="raise-form">
+        <div class="form ytka" id="raise">
+            <h1 class="guruweba_example_caption">Введите Номер Рейса</h1>
+            <p class="p123">Ваш Номер Рейса:</p>
+            <input class="inputRase"><br>
+            <button class="butt">Построить маршрут</button>
+            <button class="butt close-form">Закрыть</button>
+        </div>
+        <div class="form" id="welcome">
+            <h1 class="guruweba_example_caption">Добро Пожаловать!</h1>
+            <p class="p123">Здравствуйте! Вы находитель в приложении Навигатор По Аэропорту Шереметьево.<br>
+                Вы прибыли на самолёте, или же хотите попасть на рейс?</p><br>
+            <button class="butt">Прибыл на самолёте</button> <button class="butt" id="wantToRaise">Хочу попасть на рейс</button>
+            <button class="butt close-form">Закрыть</button>
+        </div>
+    </div>
+    <select class="psd-lift">
+        <option disabled>
+            Этаж Аэропорта
+        </option>
+        <option>
+            1 этаж
+        </option>
+        <option>
+            2 этаж
+        </option>
+        <option>
+            3 этаж
+        </option>
+    </select>
+
+    <div class="hint ytka" id="registration">
+        <h1 class="guruweba_example_caption">Вы зарегистрировались/сдали багаж?</h1>
+        <button class="hint-butt">Да, всё сделали</button> <button class="hint-butt">Ещё нет</button>
+        <button class="hint-butt close">Закрыть</button>
+    </div>
+
+    <div class="hint ytka" id="flight_number">
+        <h1 class="guruweba_example_caption">Номер Рейса</h1>
+        <p class="p123">Запишите, пожалуйста, номер рейса, чтобы мы смогли рассчитать время.</p>
+        <input class="inputRaise"><br>
+        <button class="hint-butt close">Закрыть</button>
+    </div>
+
+    <div class="hint ytka" id="cafeOrShop">
+        <h1 class="guruweba_example_caption">Вы хотите посетить кафе/магазин или другое заведение?</h1>
+        <button class="hint-butt">Да, Хочу!</button>  <button class="hint-butt">Нет, спасибо</button>
+        <button class="hint-butt close">Закрыть</button>
+    </div>
+    <div class="hint ytka" id="hurry_up">
+        <h1 class="guruweba_example_caption">Кажется, лучше поторопиться...</h1>
+        <p class="p123">Предлагаем Вам поспешить, или, дождаться автобуса, чтобы точно не опоздать на самолёт.</p><br>
+        <button class="hint-butt">К автобусной остановке</button>
+        <button class="hint-butt close">Закрыть</button>
+    </div>
+    <div></div>
+</content>
+<script src="templates/points.js"></script>
+<script src="templates/terminals.js"></script>
+<script src="templates/zavedeniya.js"></script>
+<script src="inputApp.js"></script>
+</body>
+</html>
